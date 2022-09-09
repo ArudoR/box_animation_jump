@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    display: inline-block;
+    width: 1280px;
+    height: 720px;
+    background: #695497;
+    position: relative;
+}
+
+#animated{
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 40%;
+    left: 50px;
+
+    animation-name:  jump;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.25, .64, .8, .78);
+    animation-iteration-count: infinite;
+}
+
+@keyframes jump{
+    0%{
+        left: 50px;
+    }
+
+    40%{
+        left: 400px;
+        height: 65px;
+        width: 130px;
+        bottom: 40%;
+    }
+
+    60%{
+        left: 780px;
+        height: 140px;
+        width: 100px;
+        bottom: calc(40% + 150px);
+    }
+
+    90%, 100%{
+        left: 1080px;
+        bottom: 40%;
+    }
+
+}
